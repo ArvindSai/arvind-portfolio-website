@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header.astro";
+
+---
+
+<!doctype html>
+    <head>
+        <title>Arvind's Potfolio Website</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content={Astro.generator}  />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <script src="https://kit.fontawesome.com/6d6d2c7e96.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="min-h-dvh">
+        <!-- header -->
+        <Header />
+        <div class="px-3 md:px-0 container max-w-5xl">
+            <slot />
+        </div>
+    </body>
+</html>
