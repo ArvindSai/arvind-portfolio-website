@@ -16,36 +16,44 @@ const siteNavOptions = [
 ---
 
 <header
-  class="px-3 md:px-0 max-w-5xl flex justify-between items-center py-4.5 bg-white/60 dark:bg-black shadow-2xl border-b-2 border-b-white/80"
+  class="header-footer border border-transparent border-b-black/10"
 >
-  <a href="/arvind-portfolio-website"
-    ><span class="text-xl md:text-2xl font-bold tracking-tight dark:text-white/90"
-      >Arvind Maximus</span
-    ></a
-  >
-  <nav>
-    <ul class="flex gap-4 items-center">
-      {
-        siteNavOptions.map((navOption) => (
-          <a href={`/arvind-portfolio-website/${navOption.href}`}>
-            <li class="text-sm md:text-lg text-black/70 dark:text-white/60">
-              {navOption.label}
-            </li>
-          </a>
-        ))
-      }
-      <button class="" onclick={"setTheme()"}>
-        <i class="fa-regular fa-moon h-3.5 w-3.5"></i>
-      </button>
-    </ul>
-  </nav>
+  <div class="header-footer-container">
+    <a href="/arvind-portfolio-website"
+      ><span
+        class="text-xl md:text-2xl font-bold tracking-tight dark:text-white/90"
+        >Arvind Maximus</span
+      ></a
+    >
+    <nav>
+      <ul class="flex gap-4 items-center">
+        {
+          siteNavOptions.map((navOption) => (
+            <a href={`/arvind-portfolio-website/${navOption.href}`}>
+              <li class="text-sm md:text-lg text-dual-mode">
+                {navOption.label}
+              </li>
+            </a>
+          ))
+        }
+        <button id="theme-selector" class="" onclick={"setTheme()"}>
+          <div
+            class="px-2 py-1 dark:bg-gray-800 border border-black/10 dark:border-gray-700 rounded-lg"
+          >
+            <i class="fa-regular fa-moon h-3.5 w-3.5 dark:text-white"></i>
+          </div>
+        </button>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <script>
-    function setTheme() {
-        const htmlElement = document.querySelector("html");
-        htmlElement?.classList.toggle("dark");
-    }
-    const toggleTheme = document.querySelector('button');
-    toggleTheme?.addEventListener('click', setTheme);
+  function setTheme() {
+    const htmlElement = document.querySelector("html");
+    htmlElement?.classList.toggle("dark");
+  }
+
+  const toggleTheme = document.querySelector("button");
+  toggleTheme?.addEventListener("click", setTheme);
 </script>

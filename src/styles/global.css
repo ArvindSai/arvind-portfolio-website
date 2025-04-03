@@ -1,3 +1,21 @@
 @import "tailwindcss";
 
+@layer components {
+    .header-footer {
+        @apply bg-white/60 dark:bg-black;
+    }
+
+    .header-footer-container {
+        @apply w-full px-3 xl:px-0 max-w-6xl flex justify-between items-center mx-auto py-4.5;
+    }
+
+    .text-dual-mode {
+        @apply text-black/70 dark:text-white/90;
+    }
+
+    .card-container {
+        @apply my-2 px-3 py-4 border border-black/10 dark:border-white/20 shadow-xl rounded-md;
+    }
+}
+
 @custom-variant dark (&:where(.dark, .dark *))
