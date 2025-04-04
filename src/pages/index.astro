@@ -7,9 +7,7 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
   <div class="grid grid-cols-4 gap-3">
     <!-- first row -->
     <!-- introduction card -->
-    <div
-      class="card-container flex col-span-full lg:col-span-3"
-    >
+    <div class="card-container flex col-span-full lg:col-span-3">
       <div class="text-dual-mode text-lg md:text-xl md:flex-2/3">
         <h1
           class="text-xl md:text-2xl font-light text-transparent bg-clip-text bg-gradient-to-br from-blue-500 from-30% via-fuchsia-500 via-50% to-emerald-500 to-90%"
@@ -42,18 +40,32 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
       <!-- </div> -->
     </div>
     <div class="card-container lg:col-span-1 row-span-2">
-		
-	</div>
-	
-	<!-- second row -->
-	<div class="col-span-1 h-5">
-		cyberpunk 2077
-	</div>
-	<div class="col-span-1 h-52">
-		Rick 7 Morty
-	</div>
-	<div class="col-span-1">
-		Arthur dent
-	</div>
+      <div>
+        <h1 class="card-title">War Room</h1>
+        <span class="card-sub-title">A warrior needs the right set of tools</span>
+      </div>
+      <p class="card-regular-description my-3 pb-4 border border-transparent border-b-black/20">
+        I enjoy automating tasks and reduce the burden for people to make lives easier and also
+        provide more time for the things they like to do.
+      </p>
+	  <p class="card-sub-title">My weapons of choice 🛠️ 🔩 🪚 🪛</p>
+	  <ul class="card-light-description my-2 px-4 list-disc">
+		<a href=""><li>React</li></a>
+		<a href=""><li>Javascript</li></a>
+		<a href=""><li>HTML</li></a>
+		<a href=""><li>CSS</li></a>
+		<a href=""><li>Node.js</li></a>
+		<a href=""><li>Java</li></a>
+		<a href=""><li>Spring</li></a>
+		<a href=""><li>Spring Boot</li></a>
+		<a href=""><li>Typescript</li></a>
+		<a href=""><li>Vue.js</li></a>
+	  </ul>
+    </div>
+
+    <!-- second row -->
+    <div class="col-span-1 h-5">cyberpunk 2077</div>
+    <div class="col-span-1 h-52">Rick 7 Morty</div>
+    <div class="col-span-1">Arthur dent</div>
   </div>
 </PrimarySiteLayout>

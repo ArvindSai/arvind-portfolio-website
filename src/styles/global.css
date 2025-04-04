@@ -16,6 +16,22 @@
     .card-container {
         @apply my-2 px-3 py-4 border border-black/10 dark:border-white/20 shadow-xl rounded-md;
     }
+
+    .card-title {
+        @apply text-xl lg:text-2xl font-bold dark:text-white;
+    }
+
+    .card-sub-title {
+        @apply text-sm text-black/70 font-light dark:text-white/90;
+    }
+
+    .card-regular-description {
+        @apply text-black/90 tracking-tight leading-5.5 lg:leading-6.5 dark:text-white/70;
+    }
+
+    .card-light-description {
+        @apply text-black/90 tracking-tight leading-5 lg:leading-6 font-light dark:text-white/70;
+    }
 }
 
 @custom-variant dark (&:where(.dark, .dark *))
