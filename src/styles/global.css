@@ -32,6 +32,10 @@
     .card-light-description {
         @apply text-black/90 tracking-tight leading-5 lg:leading-6 font-light dark:text-white/70;
     }
+
+    .link-highlight {
+        @apply underline underline-offset-2 text-blue-300;
+    }
 }
 
 @custom-variant dark (&:where(.dark, .dark *))
