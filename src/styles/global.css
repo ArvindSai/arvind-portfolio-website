@@ -36,6 +36,10 @@
     .link-highlight {
         @apply underline underline-offset-2 text-blue-300;
     }
+
+    .text-highlight {
+        @apply text-lg font-semibold tracking-tight text-blue-300;
+    }
 }
 
 @custom-variant dark (&:where(.dark, .dark *))
