@@ -1,45 +1,48 @@
 @import "tailwindcss";
 
 @layer components {
-    .header-footer {
-        @apply bg-white/60 dark:bg-black;
-    }
+  .header-footer {
+    @apply bg-white/60 dark:bg-black;
+  }
 
-    .header-footer-container {
-        @apply w-full px-3 xl:px-0 max-w-6xl flex justify-between items-center mx-auto py-4.5;
-    }
+  .header-footer-container {
+    @apply w-full px-3 xl:px-0 max-w-6xl flex justify-between items-center mx-auto py-4.5;
+  }
 
-    .text-dual-mode {
-        @apply text-black/70 dark:text-white/90;
-    }
+  .text-dual-mode {
+    @apply text-black/70 dark:text-white/90;
+  }
 
-    .card-container {
-        @apply my-2 px-3 py-4 border border-black/10 dark:border-white/20 shadow-xl rounded-md;
-    }
+  .card-container {
+    @apply my-2 px-3 py-4 border border-black/10 dark:border-white/20 shadow-xl rounded-md;
+  }
 
-    .card-title {
-        @apply text-xl lg:text-2xl font-bold dark:text-white;
-    }
+  .card-title {
+    @apply text-xl lg:text-2xl font-bold dark:text-white;
+  }
 
-    .card-sub-title {
-        @apply text-sm text-black/70 font-light dark:text-white/90;
-    }
+  .card-sub-title {
+    @apply text-sm text-black/70 font-light dark:text-white/90;
+  }
 
-    .card-regular-description {
-        @apply text-black/90 tracking-tight leading-5.5 lg:leading-6.5 dark:text-white/70;
-    }
+  .card-regular-description {
+    @apply text-black/90 tracking-tight leading-5.5 lg:leading-6.5 dark:text-white/70;
+  }
 
-    .card-light-description {
-        @apply text-black/90 tracking-tight leading-5 lg:leading-6 font-light dark:text-white/70;
-    }
+  .card-light-description {
+    @apply text-black/90 tracking-tight leading-5 lg:leading-6 font-light dark:text-white/70;
+  }
 
-    .link-highlight {
-        @apply underline underline-offset-2 text-blue-300;
-    }
+  .link-highlight {
+    @apply underline underline-offset-2 text-blue-300;
+  }
 
-    .text-highlight {
-        @apply text-lg font-semibold tracking-tight text-blue-300;
-    }
+  .text-highlight {
+    @apply text-lg font-semibold tracking-tight text-blue-300;
+  }
 }
 
 @custom-variant dark (&:where(.dark, .dark *))
+
+@theme {
+}
