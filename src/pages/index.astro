@@ -118,7 +118,7 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
     <div
       class="card-container flex flex-col gap-3 row-span-1 col-span-full sm:col-span-2 lg:col-span-1"
     >
-      <h4 class="card-title">My Time</h4>
+      <h4 class="card-title">Your Time</h4>
       <div class="flex gap-3">
         <div id="my-time-full-date" class="card-light-description"></div>
         <div
@@ -204,9 +204,7 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
         </div>
         <div class="flex flex-col gap-1">
           <a href="/blog2">
-            <p class="text-xl text-blue-300">
-              Math for Large Language Models
-            </p>
+            <p class="text-xl text-blue-300">Math for Large Language Models</p>
             <p>
               A quick and brief introduction to the mathematics underlying LLMs.
             </p>
@@ -215,23 +213,27 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
         <div class="flex flex-col gap-1">
           <a href="/blog3">
             <p class="text-xl text-blue-300">
-              Build your own custom AI image generator SaaS using stable diffusion
+              Build your own custom AI image generator SaaS using stable
+              diffusion
             </p>
             <p>
-              Simple exercise in training and fine-tuning a custom AI image to image generation model in google colab using open source model
+              Simple exercise in training and fine-tuning a custom AI image to
+              image generation model in google colab using open source model
             </p>
           </a>
         </div>
-		<div class="flex flex-col gap-1">
-			<a href="/blog4">
-			  <p class="text-xl text-blue-300">
-				Build a high performance blog with Astro
-			  </p>
-			  <p>
-				Astro is a modern web framework for quickly setting up static websites such as blogs and landing pages. This article takes a look at setting up a basic blog in quick time.
-			  </p>
-			</a>
-		  </div>
+        <div class="flex flex-col gap-1">
+          <a href="/blog4">
+            <p class="text-xl text-blue-300">
+              Build a high performance blog with Astro
+            </p>
+            <p>
+              Astro is a modern web framework for quickly setting up static
+              websites such as blogs and landing pages. This article takes a
+              look at setting up a basic blog in quick time.
+            </p>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -283,28 +285,34 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
       </div>
     </div>
     <div class="card-container col-span-full sm:col-span-2 row-span-1">
-		<h4 class="card-title">Contact</h4>
-		<p class="text-dual-mode italic mt-3">Please feel free to reach out to me through Github issue.</p>
-	</div>
+      <h4 class="card-title">Contact</h4>
+      <p class="text-dual-mode italic mt-3">
+        Please feel free to reach out to me through Github issue.
+      </p>
+    </div>
   </div>
 </PrimarySiteLayout>
 
 <script>
-  const fullDate = new Date();
-  const fullDateDisplay = document.querySelector("#my-time-full-date");
-  const hoursDisplay = document.querySelector("#my-time-hours");
-  const localeDisplay = document.querySelector("#my-time-locale");
+  function setLocalTime() {
+    const fullDate = new Date();
+    const fullDateDisplay = document.querySelector("#my-time-full-date");
+    const hoursDisplay = document.querySelector("#my-time-hours");
+    const localeDisplay = document.querySelector("#my-time-locale");
 
-  if (fullDateDisplay) {
-    fullDateDisplay.innerHTML = fullDate.toDateString();
+    if (fullDateDisplay) {
+      fullDateDisplay.innerHTML = fullDate.toDateString();
+    }
+
+    if (hoursDisplay) {
+      hoursDisplay.innerHTML = fullDate.toTimeString();
+    }
+
+    const locale = new Intl.Locale("en-US");
+    if (localeDisplay) {
+      localeDisplay.innerHTML = locale.getTimeZones();
+    }
   }
 
-  if (hoursDisplay) {
-    hoursDisplay.innerHTML = fullDate.toTimeString();
-  }
-
-  const locale = new Intl.Locale("en-US");
-  if (localeDisplay) {
-    localeDisplay.innerHTML = locale.getTimeZones();
-  }
+  setInterval(setLocalTime, 1000);
 </script>
