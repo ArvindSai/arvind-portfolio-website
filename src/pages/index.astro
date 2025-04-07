@@ -120,13 +120,13 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
     >
       <h4 class="card-title">Your Time</h4>
       <div class="flex gap-3">
-        <div id="my-time-full-date" class="card-light-description"></div>
+        <div id="your-time-full-date" class="card-light-description"></div>
         <div
           class="h-4 w-4 rounded-full bg-green-600 animate-pulse ring-1 ring-green-400 ring-offset-2 ring-offset-transparent"
         >
         </div>
       </div>
-      <div id="my-time-hours" class="card-sub-title"></div>
+      <div id="your-time-hours" class="card-sub-title"></div>
       <!-- <div id="my-time-locale" class="card-light-description"></div> -->
     </div>
     <div
@@ -294,11 +294,14 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
 </PrimarySiteLayout>
 
 <script>
-  function setLocalTime() {
+  function setLocalTime(timeZone: string) {
+    const fullDateDisplay = document.querySelector(
+      `#${timeZone}-time-full-date`
+    );
+    const hoursDisplay = document.querySelector(`#${timeZone}-time-hours`);
+    const localeDisplay = document.querySelector(`#${timeZone}-time-locale`);
+
     const fullDate = new Date();
-    const fullDateDisplay = document.querySelector("#my-time-full-date");
-    const hoursDisplay = document.querySelector("#my-time-hours");
-    const localeDisplay = document.querySelector("#my-time-locale");
 
     if (fullDateDisplay) {
       fullDateDisplay.innerHTML = fullDate.toDateString();
@@ -307,12 +310,8 @@ import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
     if (hoursDisplay) {
       hoursDisplay.innerHTML = fullDate.toTimeString();
     }
-
-    const locale = new Intl.Locale("en-US");
-    if (localeDisplay) {
-      localeDisplay.innerHTML = locale.getTimeZones();
-    }
   }
 
-  setInterval(setLocalTime, 1000);
+  setInterval(() => setLocalTime("your"), 1000);
+  setInterval(() => setLocalTime("my"), 1000);
 </script>
