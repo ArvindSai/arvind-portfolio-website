@@ -1,7 +1,120 @@
 ---
 import PrimarySiteLayout from "../layouts/PrimarySiteLayout.astro";
+
+const pageTitle = "Blog Posts";
+const pageDescripton = "Below is the list of al my blogs related to topic";
 ---
 
 <PrimarySiteLayout>
-<p>Blog page</p>
+  <div class="text-center">
+    <h1>{pageTitle}</h1>
+    <p>{pageDescripton}</p>
+  </div>
+  <div class="my-6 border border-l-red-200 border-t-black/10">
+    <div class="flex gap-3 flex-wrap">
+      <a
+        class="card-container p-0 h-1/4 w-1/4 group hover:scale-105"
+        href="/arvind-portfolio-website/build-a-beat"
+      >
+        <div class="flex flex-col gap-2">
+          <div class="overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-110"
+              src="/public/blog-img-1.webp"
+              alt=""
+            />
+          </div>
+          <div class="px-2 flex flex-col gap-2">
+            <h3
+              class="card-regular-description text-blue-300 group-hover:underline group-hover:underline-offset-4"
+            >
+              Build your own lyrics (Song Generator)
+            </h3>
+            <p class="card-sub-title mb-4">
+              Create your own tunes per your taste that you always wanted to
+              build.
+            </p>
+          </div>
+        </div>
+      </a>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+      <div class="card-container h-1/3 w-1/3 flex flex-col gap-2">
+        <div class="h-1/3 w-1/3">
+          <img
+            class="w-full h-full object-cover"
+            src="/public/blog-img-1.webp"
+            alt=""
+          />
+        </div>
+        <h3>Build your own lyrics (Song Generator)</h3>
+        <p>
+          Create your own tunes per your taste that you always wanted to build.
+        </p>
+      </div>
+    </div>
+  </div>
 </PrimarySiteLayout>
