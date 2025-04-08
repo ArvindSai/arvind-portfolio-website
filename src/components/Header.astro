@@ -1,18 +1,6 @@
 ---
-const siteNavOptions = [
-  {
-    label: "Blog",
-    href: "blog",
-  },
-  {
-    label: "Projects",
-    href: "projects",
-  },
-  {
-    label: "Github",
-    href: "github",
-  },
-];
+import {appConfig} from '../config/appConfig';
+
 ---
 
 <header
@@ -28,7 +16,7 @@ const siteNavOptions = [
     <nav>
       <ul class="flex gap-4 items-center">
         {
-          siteNavOptions.map((navOption) => (
+          appConfig.siteNavOptions.map((navOption) => (
             <a href={`/arvind-portfolio-website/${navOption.href}`}>
               <li class="text-sm md:text-lg text-dual-mode">
                 {navOption.label}
