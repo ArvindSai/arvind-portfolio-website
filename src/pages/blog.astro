@@ -18,7 +18,7 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
         {
           appConfig.blogArticles.map((blogArticle) => (
             <a
-              class="card-container p-0 col-span-full row-span-1 sm:col-span-1 lg:col-span-1 group hover:scale-105"
+              class="card-container p-0 col-span-full row-span-1 sm:col-span-1 lg:col-span-1 group hover:bg-black/5"
               href={`/arvind-portfolio-website/${blogArticle.slug}`}
             >
               <div class="flex flex-col gap-2">
@@ -30,7 +30,7 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
                   />
                 </div>
                 <div class="px-2 flex flex-col gap-2">
-                  <h3 class="card-regular-description text-blue-300 group-hover:underline group-hover:underline-offset-4">
+                  <h3 class="card-regular-description text-blue-300 group-hover:underline group-hover:underline-offset-4 group-hover:text-blue-400">
                     {blogArticle.title}
                   </h3>
                   <p class="card-sub-title mb-4">{blogArticle.description}</p>
