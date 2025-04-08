@@ -10,11 +10,11 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
 
 <PrimarySiteLayout>
   <div class="max-w-3xl mx-auto text-center">
-    <h1>{pageTitle}</h1>
-    <p>{pageDescripton}</p>
+    <h1 class="my-2 card-title text-3xl font-semibold">{pageTitle}</h1>
+    <p class="card-sub-title italic text-xl">{pageDescripton}</p>
   </div>
   <div class="my-6 border border-transparent border-t-black/10">
-      <div class="px-8 sm:px-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div class="px-8 pt-4 sm:px-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {
           appConfig.blogArticles.map((blogArticle) => (
             <a
