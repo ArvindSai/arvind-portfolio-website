@@ -9,36 +9,36 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
 ---
 
 <PrimarySiteLayout>
-  <div class="text-center">
+  <div class="max-w-3xl mx-auto text-center">
     <h1>{pageTitle}</h1>
     <p>{pageDescripton}</p>
   </div>
   <div class="my-6 border border-transparent border-t-black/10">
-    <div class="flex gap-3 flex-wrap">
-      {
-        appConfig.blogArticles.map((blogArticle) => (
-          <a
-            class="card-container p-0 h-1/4 w-1/4 group hover:scale-105"
-            href={`/arvind-portfolio-website/${blogArticle.slug}`}
-          >
-            <div class="flex flex-col gap-2">
-              <div class="overflow-hidden">
-                <img
-                  class="w-full h-full object-cover group-hover:scale-110"
-                  src={`/public/${blogArticle.image}`}
-                  alt={""}
-                />
+      <div class="px-8 sm:px-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {
+          appConfig.blogArticles.map((blogArticle) => (
+            <a
+              class="card-container p-0 col-span-full row-span-1 sm:col-span-1 lg:col-span-1 group hover:scale-105"
+              href={`/arvind-portfolio-website/${blogArticle.slug}`}
+            >
+              <div class="flex flex-col gap-2">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110"
+                    src={`/public/${blogArticle.image}`}
+                    alt={""}
+                  />
+                </div>
+                <div class="px-2 flex flex-col gap-2">
+                  <h3 class="card-regular-description text-blue-300 group-hover:underline group-hover:underline-offset-4">
+                    {blogArticle.title}
+                  </h3>
+                  <p class="card-sub-title mb-4">{blogArticle.description}</p>
+                </div>
               </div>
-              <div class="px-2 flex flex-col gap-2">
-                <h3 class="card-regular-description text-blue-300 group-hover:underline group-hover:underline-offset-4">
-                  {blogArticle.title}
-                </h3>
-                <p class="card-sub-title mb-4">{blogArticle.description}</p>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+            </a>
+          ))
+        }
+      </div>
   </div>
 </PrimarySiteLayout>
