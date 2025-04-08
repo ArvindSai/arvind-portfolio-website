@@ -1,4 +1,5 @@
 export const appConfig = {
+  categories: ['sports', 'culture', 'style', 'selfhelp'],
   siteNavOptions: [
     {
       label: "Blog",
