@@ -17,8 +17,8 @@ import {appConfig} from '../config/appConfig';
       <ul class="flex gap-4 items-center">
         {
           appConfig.siteNavOptions.map((navOption) => (
-            <a href={`/arvind-portfolio-website/${navOption.href}`}>
-              <li class="text-sm md:text-lg text-dual-mode">
+            <a class="text-dual-mode group hover:underline hover:underline-offset-[12px]" href={`/arvind-portfolio-website/${navOption.href}`}>
+              <li class="text-sm md:text-lg group-hover:scale-105">
                 {navOption.label}
               </li>
             </a>
@@ -26,7 +26,7 @@ import {appConfig} from '../config/appConfig';
         }
         <button id="theme-selector" class="" onclick={"setTheme()"}>
           <div
-            class="px-2 py-1 dark:bg-gray-800 border border-black/10 dark:border-gray-700 rounded-lg"
+            class="px-2 py-1 dark:bg-gray-800 border border-black/10 dark:border-gray-700 rounded-lg hover:scale-110"
           >
             <i class="fa-regular fa-moon h-3.5 w-3.5 dark:text-white"></i>
           </div>
