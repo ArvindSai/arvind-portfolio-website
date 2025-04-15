@@ -14,11 +14,12 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
     <p class="card-sub-title italic text-xl">{pageDescripton}</p>
   </div>
   <div class="my-6 border border-transparent border-t-black/10">
-      <div class="px-8 pt-4 sm:px-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+    <div class="px-8 pt-4 sm:px-0 grid grid-cols-2 sm:grid-cols-3 gap-2">
+      <div class="col-span-full sm:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-2">
         {
           appConfig.blogArticles.map((blogArticle) => (
             <a
-              class="card-container p-0 col-span-full row-span-1 sm:col-span-1 lg:col-span-1 group hover:bg-black/5"
+              class="card-container p-0 sm:col-span-1 group hover:bg-black/5"
               href={`/arvind-portfolio-website/${blogArticle.slug}`}
             >
               <div class="flex flex-col gap-2">
@@ -40,5 +41,8 @@ const pageDescripton = "Below is the list of al my blogs related to topic";
           ))
         }
       </div>
+      <div class="hidden sm:block col-span-1"></div>
+    </div>
   </div>
 </PrimarySiteLayout>
+ 
