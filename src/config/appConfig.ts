@@ -6,12 +6,12 @@ export const appConfig = {
       href: "blog",
     },
     {
-      label: "Projects",
-      href: "projects",
+      label: "Sports",
+      href: "sports",
     },
     {
-      label: "Github",
-      href: "github",
+      label: "culture",
+      href: "culture",
     },
   ],
   blogArticles: [

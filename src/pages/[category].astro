@@ -1,0 +1,31 @@
+---
+import BlogListPage from "./blog.astro";
+
+export function getStaticPaths() {
+    const pages = [
+    {
+      slug: "sports",
+      title: "Sports",
+      text: "We have lots of Sports for you",
+    },
+    {
+      slug: "culture",
+      title: "Culture",
+      text: "posts about the latest trends, styles etc",
+    },
+  ];
+
+  return pages.map(({ slug, title, text }) => {
+    return {
+      params: { category: slug },
+      props: { title, text },
+    };
+  });
+};
+
+let {category} = Astro.params;
+---
+
+<BlogListPage category={category}>
+
+</BlogListPage>
